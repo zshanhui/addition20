@@ -122,6 +122,10 @@ fn app() -> Html {
                 <p class="version-text">{"Rust/Yew WASM rewrite of Addition20"}</p>
                 <h1>{"Adding and subtracting from 1-20"}</h1>
                 <p>{"Generate a set of problems, type your answers, and use hints to count with visual markers."}</p>
+                <p class="version-choice">
+                    {"Want the 2015 JavaScript version? "}
+                    <a href="original-js.html">{"Play the original JS game"}</a>
+                </p>
 
                 <fieldset class="mode-controls">
                     <legend>{"Mode"}</legend>

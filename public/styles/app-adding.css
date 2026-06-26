@@ -64,6 +64,17 @@ button:disabled {
 	letter-spacing: 0.08em;
 }
 
+.version-choice {
+	padding: 12px 14px;
+	border-radius: 12px;
+	background: #edf7ff;
+}
+
+.version-choice a {
+	color: #24598f;
+	font-weight: 800;
+}
+
 h1,
 h2,
 h3 {
