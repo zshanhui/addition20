@@ -1,0 +1,9 @@
+[package]
+name = "addition20"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+js-sys = "0.3.82"
+web-sys = { version = "0.3.82", features = ["HtmlInputElement", "InputEvent"] }
+yew = { version = "0.23.0", features = ["csr"] }
