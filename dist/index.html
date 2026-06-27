@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Adding/Subtracting Numbers 1-20 | Yew WASM</title>
+		<link rel="stylesheet" href="./app-adding-33780d0cc8a0aa6b.css" integrity="sha384-ZQs/svNZbgIptiKP9yMoA9Q1KqHNd3TTWgutIuP8GaVM/G9z+wyB3FHa2hh9YjSm"/>
+		
+		
+		
+<script type="module">
+import init, * as bindings from './addition20-b7f1a12b4b9e0e41.js';
+const wasm = await init({ module_or_path: './addition20-b7f1a12b4b9e0e41_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+	<link rel="modulepreload" href="./addition20-b7f1a12b4b9e0e41.js" crossorigin="anonymous" integrity="sha384-b4PMVWLOGhRqWQBIj5pW7Vjok1hFmPJEfCc6abxwni+4LrPBR60hVQD/wLoaKbf4"><link rel="preload" href="./addition20-b7f1a12b4b9e0e41_bg.wasm" crossorigin="anonymous" integrity="sha384-ABn00I+NF5S32JTnZ8+kJL4OpLPkDGXsP/QPbagXIJ1IHWlp7xD4j87cZImoToF1" as="fetch" type="application/wasm"></head>
+	<body>
+		<noscript>This game needs JavaScript and WebAssembly enabled to run.</noscript>
+	</body>
+</html>
