@@ -1,0 +1,160 @@
+body {
+	background: lightblue;
+}
+
+div#app-wrapper {
+	position: fixed;
+	left: 300px;
+	width: 650px;
+	min-height: 610px;
+	margin: auto;
+	padding: 10px;
+	background: #fff;
+}
+
+div.balls {
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	background: green;
+}
+
+div#balls-container,
+div#balls-container2 {
+	position: fixed;
+	top: 70px;
+	left: 550px;
+	width: 50px;
+	min-height: 300px;
+	border: 2px dashed green;
+}
+
+div#balls-container2 {
+	left: 750px;
+}
+
+div#big-plus {
+	position: fixed;
+	top: 190px;
+	left: 660px;
+	width: 30px;
+	height: 30px;
+	color: green;
+	font-size: 40px;
+}
+
+div#equals {
+	position: fixed;
+	top: 190px;
+	left: 820px;
+	width: 40px;
+	height: 30px;
+	color: green;
+	font-size: 30px;
+}
+
+p#plus-sign {
+	margin-left: 60px;
+	color: green;
+	font-size: 20px;
+}
+
+div#info-text {
+	position: fixed;
+	z-index: 10;
+	width: 220px;
+	height: 300px;
+	font-family: georgia, arial, sans-serif;
+}
+
+div#info-text a {
+	color: #24598f;
+	font-weight: 700;
+}
+
+div#problem {
+	position: fixed;
+	top: 10px;
+	left: 590px;
+	width: 200px;
+	height: 45px;
+	color: green;
+	font-size: 45px;
+	font-style: italic;
+	text-align: center;
+}
+
+div#math-problems {
+	position: fixed;
+	left: 30px;
+	width: 100px;
+	margin-top: 300px;
+	font-family: arial, sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	list-style-type: none;
+}
+
+div#math-problems li {
+	margin-bottom: 5px;
+}
+
+div#input-fields {
+	display: inline-block;
+	position: fixed;
+	top: 310px;
+	left: 150px;
+	width: 100px;
+}
+
+div#input-fields input {
+	margin-bottom: 9px;
+}
+
+div#check-answer {
+	position: fixed;
+	top: 270px;
+	z-index: 1000;
+	width: 100px;
+}
+
+ul.check-results {
+	position: fixed;
+	width: 170px;
+	height: 280px;
+	margin-top: 140px;
+	font-size: 1em;
+}
+
+ul.check-results li {
+	padding-bottom: 10px;
+}
+
+li.wrong-answer {
+	color: salmon;
+}
+
+li.correct-answer {
+	color: green;
+}
+
+.win-points {
+	position: fixed;
+	top: 10px;
+	right: 30px;
+	font-size: 20px;
+}
+
+div#mode-controls {
+	position: absolute;
+	top: 100px;
+	right: 50px;
+}
+
+.credit-text {
+	position: absolute;
+	bottom: 5px;
+	color: #909090;
+}

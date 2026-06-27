@@ -1,0 +1,265 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: #e9f7ff;
+	color: #183046;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.app-shell {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: minmax(220px, 320px) minmax(360px, 1fr) minmax(300px, 520px);
+	gap: 24px;
+	padding: 32px;
+	background: radial-gradient(circle at top left, #ffffff, #bfeeff);
+	transition: background 250ms ease-in-out;
+}
+
+.app-shell.round-one {
+	background: linear-gradient(135deg, #ffe2eb, #d9ecff);
+}
+
+.app-shell.round-two {
+	background: linear-gradient(135deg, #ffd3c8, #fff6c4);
+}
+
+.app-shell.round-complete {
+	background: linear-gradient(135deg, #c7ffcb, #bcd7ff);
+}
+
+.intro-card,
+.practice-card,
+.hint-card {
+	border: 2px solid rgba(24, 48, 70, 0.08);
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.88);
+	box-shadow: 0 16px 50px rgba(24, 48, 70, 0.12);
+	padding: 24px;
+}
+
+.version-text {
+	margin: 0 0 16px;
+	color: #5f7385;
+	font-size: 0.9rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.version-choice {
+	padding: 12px 14px;
+	border-radius: 12px;
+	background: #edf7ff;
+}
+
+.version-choice a {
+	color: #24598f;
+	font-weight: 800;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+}
+
+.mode-controls {
+	display: grid;
+	gap: 10px;
+	margin: 24px 0;
+	padding: 16px;
+	border: 2px dashed #88bad1;
+	border-radius: 14px;
+}
+
+.mode-controls label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.primary-button,
+.secondary-button,
+.hint-button {
+	border: 0;
+	border-radius: 999px;
+	background: #187c52;
+	color: #fff;
+	font-weight: 700;
+}
+
+.primary-button,
+.secondary-button {
+	padding: 12px 18px;
+}
+
+.secondary-button {
+	background: #24598f;
+}
+
+.hint-button {
+	padding: 7px 12px;
+	background: #e9f7ef;
+	color: #187c52;
+}
+
+.practice-header,
+.hint-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.problem-list {
+	display: grid;
+	gap: 12px;
+	padding-left: 24px;
+}
+
+.problem-row {
+	display: grid;
+	grid-template-columns: 96px 72px 64px minmax(80px, 1fr);
+	align-items: center;
+	gap: 12px;
+}
+
+.problem-text,
+.hint-problem {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.answer-input {
+	width: 72px;
+	padding: 8px 10px;
+	border: 2px solid #d4dee7;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.answer-input.answer-correct {
+	border-color: #187c52;
+	background: #ecfff6;
+}
+
+.answer-input.answer-wrong {
+	border-color: #cc4255;
+	background: #fff1f3;
+}
+
+.result-text {
+	min-height: 1.25rem;
+	color: #5f7385;
+	font-weight: 700;
+}
+
+.empty-state {
+	color: #5f7385;
+	font-style: italic;
+}
+
+.ball-stage {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	flex-wrap: wrap;
+	margin-top: 16px;
+	padding: 18px;
+	border: 2px dashed #5ca879;
+	border-radius: 16px;
+	background: #f8fffb;
+}
+
+.ball-stage.subtract-stage {
+	border-color: #cc4255;
+	background: #fff8f8;
+}
+
+.ball-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	max-width: 190px;
+}
+
+.ball-group.wide {
+	max-width: 360px;
+}
+
+.ball {
+	display: inline-flex;
+	width: 34px;
+	height: 34px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #143a27;
+	border-radius: 50%;
+	background: #1e9a65;
+	color: #e7fff5;
+	font-weight: 700;
+}
+
+.removed-ball {
+	background: #ed6877;
+	opacity: 0.35;
+	text-decoration: line-through;
+}
+
+.large-operator {
+	color: #187c52;
+	font-size: 2.4rem;
+	font-weight: 800;
+}
+
+.win-module {
+	margin-top: 24px;
+	padding: 20px;
+	border-radius: 16px;
+	background: #fff;
+	text-align: center;
+}
+
+.win-module a {
+	color: #cc4255;
+	font-size: 1.4rem;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+@media (max-width: 1050px) {
+	.app-shell {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 560px) {
+	.app-shell {
+		padding: 16px;
+	}
+
+	.practice-header,
+	.hint-header,
+	.problem-row {
+		align-items: flex-start;
+		grid-template-columns: 1fr;
+	}
+}
